@@ -1,6 +1,5 @@
 package consoleGame;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
@@ -14,8 +13,6 @@ public class DrawText {
 
     public void draw(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        g2.setBackground(Color.black);
-        g2.setColor(new Color(255, 191, 0));
-
+        g2.drawString("", 0, 0);
     }
 }

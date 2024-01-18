@@ -9,7 +9,10 @@ public class GameMain {
 	private static final int SCREEN_WIDTH = 800;
 	private static final int SCREEN_HEIGHT = 600;
 	
-	private Color playerBackColor = Color.black;
+	// Defualt is black
+	private Color playerBackColor = Color.BLACK;
+	// Defualt is white
+	private Color playerForeColor = Color.BLACK;
 	
 	public static void main(String args[]) {
 
@@ -18,7 +21,7 @@ public class GameMain {
 	}
 	
 	private static void createJFrame() {
-		JFrame frame = new JFrame("Physics Engine");
+		JFrame frame = new JFrame("Console");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 		frame.setResizable(false);
@@ -32,6 +35,18 @@ public class GameMain {
 	
 	public Color getPlayerBackColor() {
 		return playerBackColor;
+	}
+	
+	public void setPlayerBackColor(Color newColor) {
+		playerBackColor = newColor;
+	}
+	
+	public Color getPlayerForeColor() {
+		return playerForeColor;
+	}
+	
+	public void setPlayerForeColor(Color newColor) {
+		playerForeColor = newColor;
 	}
 
 }
