@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class Console extends JPanel{
 	
-	private GameMain gm = new GameMain();
+	public GameMain gm = new GameMain();
 	private DrawText drawText;
 	
 	// Start at 200
@@ -27,6 +27,7 @@ public class Console extends JPanel{
 	private static final long serialVersionUID = -6494835447206019533L;
 	
 	public Console() {
+		this.drawText = new DrawText(this);
 		setBackground(gm.getPlayerBackColor());
 		
 	}
@@ -35,8 +36,8 @@ public class Console extends JPanel{
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setColor(Color.white);
-		g2.fillRect(blinkBoxX, blinkBoxY, blinkBoxWidth, blinkBoxHeight);
 		this.drawText.draw(g2);
+		g2.fillRect(blinkBoxX, blinkBoxY, blinkBoxWidth, blinkBoxHeight);
 	}
 
 }

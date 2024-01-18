@@ -33,6 +33,14 @@ public class GameMain {
 		frame.setVisible(true);
 	}
 	
+	public static int getScreenWidth() {
+		return SCREEN_WIDTH;
+	}
+
+	public static int getScreenHeight() {
+		return SCREEN_HEIGHT;
+	}
+	
 	public Color getPlayerBackColor() {
 		return playerBackColor;
 	}
